@@ -1,17 +1,15 @@
 #pragma once
 #include "Math2D.h"
-#include <string>
 
 enum OBJ_TYPE
 {
-	UNKNOWN,
+	UNKMOWN,
 	PLAYER,
 	ENEMY,
 	BULLET,
 	EFFECT,
 	MAX_OBJ_TYPE
 };
-
 
 class Base
 {
@@ -36,6 +34,7 @@ protected:
 	Vector2D pos_;//位置
 	Vector2D vel_;//速度
 	unsigned int Color_;//色 符号なし整数
-	OBJ_TYPE objType;//オブジェクトの種類
+	OBJ_TYPE objType;
+
 };
 

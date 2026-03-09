@@ -6,5 +6,5 @@ namespace Input {
 	void KeyStateUpdate();
 	bool IsKeyUP(int keyCode);
 	bool IsKeyDown(int keyCode);
-	bool IsKeepKeyDown(int keyCode);
+	int IsKeepKeyDown(int keyCode);
 }

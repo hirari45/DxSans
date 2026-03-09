@@ -6,22 +6,21 @@ class ExplosionEffect :
     public Base
 {
 public:
-	ExplosionEffect(const Vector2D& pos, int particleCount = 20);
-	~ExplosionEffect() = default;
-	void Update() override;
-	void Draw() override;
-	bool IsFinished() const { return isFinished_; }
+    ExplosionEffect(const Vector2D& pos, int particleCount = 20);
+    void Update() override;
+    void Draw() override;
+    bool IsFinished() const { return isFinished_; }
 
-	struct Particle
-	{
-		Vector2D Offset;//位置
-		Vector2D vel;//速度
-		float life;//寿命
-		float radius;//半径
-		float alpha;//不透明度
-	};
+    struct Particle
+    {
+        Vector2D Offset;
+        Vector2D vel;
+        float life;
+        float radius;
+        float alpha;//不透明度
+    };
 private:
-	bool isFinished_;//エフェクト終了フラグ
-	std::vector<Particle> particles_;//パーティクル群
+    bool isFinished_;
+    std::vector<Particle> particles_;
 };
 

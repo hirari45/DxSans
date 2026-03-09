@@ -37,7 +37,7 @@ bool Input::IsKeyDown(int keyCode)
 	return(key_down[keyCode]);
 }
 
-bool Input::IsKeepKeyDown(int keyCode)
+int Input::IsKeepKeyDown(int keyCode)
 {
 	return(Key_Keep[keyCode]);
 }
